@@ -2,8 +2,6 @@ language: generic
 matrix:
   include:
     - env:
-        - BOARD="arduino:avr:uno"
-    - env:
         - BOARD="Seeeduino:samd:seeed_XIAO_m0"
 # default phases
 before_install:
@@ -29,18 +27,6 @@ before_install:
 install:
   - mkdir -p $HOME/Arduino/libraries
 script:
-    - |
-      if [ "$BOARD" == "arduino:avr:uno" ]; then
-        buildExampleSketch lv_tests;
-      fi
-    - |
-      if [ "$BOARD" == "arduino:avr:uno" ]; then
-        buildExampleSketch HelloWorld;
-      fi
-    - |
-      if [ "$BOARD" == "Seeeduino:samd:seeed_XIAO_m0" ]; then
-        buildExampleSketch lv_tests;
-      fi
     - |
       if [ "$BOARD" == "Seeeduino:samd:seeed_XIAO_m0" ]; then
         buildExampleSketch HelloWorld;
