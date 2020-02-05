@@ -2,7 +2,7 @@ language: generic
 matrix:
   include:
     - env:
-        - BOARD="Seeeduino:samd:seeed_XIAO_m0"
+        - BOARD="Seeeduino:samd:seeed_grove_ui_wireless"
 # default phases
 before_install:
   - mkdir -p "$HOME/bin"
