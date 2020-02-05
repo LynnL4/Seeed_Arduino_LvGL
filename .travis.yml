@@ -29,7 +29,7 @@ install:
   - mkdir -p $HOME/Arduino/libraries
 script:
     - |
-      if [ "$BOARD" == "Seeeduino:samd:seeed_XIAO_m0" ]; then
+      if [ "$BOARD" == "Seeeduino:samd:seeed_grove_ui_wireless" ]; then
         buildExampleSketch HelloWorld;
       fi
 notifications:
